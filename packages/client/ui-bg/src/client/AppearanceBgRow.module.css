@@ -1,0 +1,98 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.slot {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 6px;
+}
+
+.slotLabel {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.kindRow {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.kindButton {
+  padding: 4px 10px;
+  font-size: 12px;
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.kindButton[data-active='true'] {
+  border-color: var(--dsw-alias-interactive-bg-default);
+  background: var(--dsw-alias-interactive-bg-default);
+  color: var(--dsw-alias-button-primary-fg);
+}
+
+.colorInput,
+.urlInput {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 13px;
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 4px;
+  background: var(--dsw-alias-bg-base);
+  color: inherit;
+}
+
+.filePicker {
+  padding: 8px;
+  border: 1px dashed var(--dsw-alias-border-l1);
+  border-radius: 4px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.filePicker input {
+  display: none;
+}
+
+.filePicker[data-has-file='true'] {
+  border-style: solid;
+}
+
+.error {
+  font-size: 12px;
+  color: var(--dsw-alias-state-business-error);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.clearButton {
+  padding: 4px 10px;
+  font-size: 12px;
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}

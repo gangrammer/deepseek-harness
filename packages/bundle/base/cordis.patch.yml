@@ -449,3 +449,16 @@
     # choice.
     - id: llm-deepseek
       name: '@deepseek-ai/dsh-llm-deepseek'
+# Mode-level insert for the local `weather` capability seam. Bundles use
+# `- insert:` to declare ids for the first time; subsequent layers (other
+# bundles, then the user's `cordis.patch.yml`) address these ids by row
+# replacement. The home-level patch cannot introduce ids.
+- insert:
+    - id: weather
+      name: '@deepseek-ai/dsh-weather'
+
+    - id: weather-openmeteo
+      name: '@deepseek-ai/dsh-weather-openmeteo'
+
+    - id: tool-weather
+      name: '@deepseek-ai/dsh-tool-weather'

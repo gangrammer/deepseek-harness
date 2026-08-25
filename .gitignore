@@ -39,3 +39,12 @@ apps/web/dist/
 worktrees/
 .agents/worktrees/
 .typert-*/
+.dsh-home/
+
+# TypeScript 编译产物被 tsc 误写到 src/ 旁边的清理规则。
+# 上游仓库只有 .ts 源文件，产物应该输出到 lib/（已被上面的 lib/ 规则忽略）。
+# 如果以后发现需要把这些产物推上去，把下面 4 行删掉即可。
+**/src/*.d.ts
+**/src/*.js
+**/src/*.d.ts.map
+**/src/*.js.map

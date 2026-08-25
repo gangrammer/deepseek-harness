@@ -182,6 +182,9 @@
     - id: ui-theme
       name: '@deepseek-ai/dsh-client-ui-theme'
 
+    - id: ui-bg
+      name: '@deepseek-ai/dsh-client-ui-bg'
+
     - id: locale
       name: '@deepseek-ai/dsh-client-locale'
 
