@@ -45,9 +45,6 @@ type HeroRowProps = CommonProps & HeroInjected
 /** Allowed image MIME types for the local-file picker. */
 const ALLOWED_IMAGE_TYPES = ['image/png', 'image/jpeg', 'image/gif', 'image/svg+xml'] as const
 
-/** Upper bound on the local-file upload (4 MB). */
-const MAX_FILE_BYTES = 4 * 1024 * 1024
-
 /** Edit a single BgSource; commits through `onChange` on every change. */
 function SourceEditor({
   source,
@@ -92,10 +89,6 @@ function SourceEditor({
   const onFileChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (file === undefined) return
-    if (file.size > MAX_FILE_BYTES) {
-      setError(t('errorTooLarge'))
-      return
-    }
     if (!(ALLOWED_IMAGE_TYPES as readonly string[]).includes(file.type)) {
       setError(t('errorBadType'))
       return
